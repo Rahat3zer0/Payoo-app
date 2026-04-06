@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payoo Dashboard</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex justify-center py-4">
+
+  <div class="w-full max-w-sm min-h-screen bg-white rounded-2xl overflow-hidden">
+
+    <!-- 🔵 Top -->
+    <div class="px-4 pt-5 pb-4 border-b border-gray-200">
+
+      <div class="flex justify-between items-center">
+
+        <div class="flex items-center gap-2">
+          <!-- 🔥 Logo (NO ACTIVE RESET) -->
+          <img src="assets/Group.png"
+            class="w-8 cursor-pointer hover:scale-110 transition"
+            onclick="goDashboardNoActive()">
+
+          <div>
+            <h2 id="balance" class="font-bold text-lg">$45000</h2>
+            <p class="text-xs text-gray-400">Available Balance</p>
+          </div>
+        </div>
+
+        <button onclick="window.location.href='index.html'"
+          class="flex items-center gap-1 text-xs border px-3 py-1 rounded-lg bg-white shadow-sm">
+          <img src="assets/logout.png" class="w-8">
+          Log Out
+        </button>
+
+      </div>
+
+      <div class="mt-4">
+        <h2 class="font-semibold text-lg mb-1">🔥 Welcome to Payooo!</h2>
+        <p class="text-sm text-gray-400">
+          Enjoy easy and convenient financial services with us.<br>
+          Cashout charge is low and secure.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 🔘 Actions -->
+    <div class="mx-4 mt-4 p-4 bg-white rounded-3xl shadow-sm border border-gray-200">
+
+      <div class="grid grid-cols-3 gap-3">
+
+        <div onclick="window.location.href='addmoney.html'"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/wallet1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Add Money</p>
+        </div>
+
+        <div onclick="window.location.href='cashout.html'"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/send1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Cashout</p>
+        </div>
+
+        <div onclick="window.location.href='transfer.html'"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/money1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Transfer Money</p>
+        </div>
+
+        <div onclick="window.location.href='getbonus.html'"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/bonus1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Get Bonus</p>
+        </div>
+
+        <div onclick="window.location.href='paybill.html'"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/purse1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Pay Bill</p>
+        </div>
+
+        <!-- 🔥 TRANSACTION BUTTON -->
+        <div id="transactionBtn"
+          onclick="goToDashboardWithActive()"
+          class="p-3 rounded-xl border text-center cursor-pointer">
+          <img src="assets/transaction1.png" class="mx-auto w-8 mb-1">
+          <p class="text-xs">Transactions</p>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- 📜 Payments -->
+    <div class="px-4 mt-5">
+
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="font-semibold text-sm">Latest Payment</h3>
+        <span class="text-xs text-gray-400">View All</span>
+      </div>
+
+      <!-- Items -->
+      <div class="bg-white p-3 rounded-2xl mb-3 shadow-sm border flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="assets/purse1.png" class="w-8">
+          <div>
+            <p class="text-sm font-medium">Electricity Bill</p>
+            <p class="text-xs text-gray-400">Today 01:44 AM</p>
+          </div>
+        </div>
+        <span class="text-gray-400">⋮</span>
+      </div>
+
+      <div class="bg-white p-3 rounded-2xl mb-3 shadow-sm border flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="assets/wallet1.png" class="w-8">
+          <div>
+            <p class="text-sm font-medium">Bank Deposit</p>
+            <p class="text-xs text-gray-400">Today 01:44 AM</p>
+          </div>
+        </div>
+        <span class="text-gray-400">⋮</span>
+      </div>
+
+      <div class="bg-white p-3 rounded-2xl mb-3 shadow-sm border flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="assets/money1.png" class="w-8">
+          <div>
+            <p class="text-sm font-medium">Mobile Recharge</p>
+            <p class="text-xs text-gray-400">Today 01:44 AM</p>
+          </div>
+        </div>
+        <span class="text-gray-400">⋮</span>
+      </div>
+
+      <div class="bg-white p-3 rounded-2xl mb-5 shadow-sm border flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="assets/purse1.png" class="w-8">
+          <div>
+            <p class="text-sm font-medium">Gas Bill</p>
+            <p class="text-xs text-gray-400">Today 01:44 AM</p>
+          </div>
+        </div>
+        <span class="text-gray-400">⋮</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/dashboard.js"></script>
+
+</body>
+</html>
